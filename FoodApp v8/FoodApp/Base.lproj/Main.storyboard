@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PLR-Xp-Xv9">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5l-bL-57L">
+                                <rect key="frame" x="169.5" y="617" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="ClearButton:" destination="HFB-jz-e1H" eventType="touchUpInside" id="VV1-CF-D0D"/>
+                                    <action selector="ClearClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eq3-YQ-kDq"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4x5-mC-H9g">
+                                <rect key="frame" x="137" y="481" width="100" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pVV-6g-Qg4"/>
+                                    <constraint firstAttribute="width" constant="100" id="uBY-q7-ueX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-Eg-3JJ">
+                                <rect key="frame" x="131.5" y="467" width="112.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WYb-Eg-3JJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GQ9-5t-EcV"/>
+                            <constraint firstItem="4x5-mC-H9g" firstAttribute="top" secondItem="WYb-Eg-3JJ" secondAttribute="bottom" constant="21" id="Jqj-kR-CvE"/>
+                            <constraint firstItem="k5l-bL-57L" firstAttribute="top" secondItem="4x5-mC-H9g" secondAttribute="bottom" constant="8" id="YqE-Ie-agl"/>
+                            <constraint firstItem="k5l-bL-57L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7r-Tk-Wux"/>
+                            <constraint firstItem="4x5-mC-H9g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIg-3p-VrN"/>
+                            <constraint firstItem="WYb-Eg-3JJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gTD-8e-NKL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k5l-bL-57L" secondAttribute="bottom" constant="20" id="tt7-wk-3XG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Y32-n6-55N" appends="YES" id="hDO-p0-ejQ"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Review" prompt="Food App" id="zf6-z0-c4V"/>
+                    <connections>
+                        <outlet property="ResultImage" destination="4x5-mC-H9g" id="ocS-r4-N0p"/>
+                        <outlet property="ResultText" destination="WYb-Eg-3JJ" id="0Z2-Xc-hh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="HFB-jz-e1H" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Y32-n6-55N">
+                    <connections>
+                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="SKq-6z-x1W"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="99.400299850074973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hby-wG-Ugl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLR-Xp-Xv9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K33-7P-FMx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F7w-2p-NDe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJX-sw-1jj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="99.400299850074973"/>
+        </scene>
+    </scenes>
+</document>
